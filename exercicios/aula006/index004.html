@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamanho do nome e maisculo e minusculo</title>
+    <style>
+        body{
+            background-color: black;
+            font: normal 20pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+<body> 
+    <script>
+        var nome = prompt('Digite seu nome: ')
+        document.writeln(`Olá <strong>${nome}, seu nome tem ${nome.length} letras.<br/>`)
+        document.writeln(`Seu nome em maiúsculo fica ${nome.toUpperCase()}.</br>`)
+        document.writeln(`Seu nome em minúsculo fica ${nome.toLowerCase()}.<br/>`)
+
+        var sal = Number(prompt('Digite seu salário: '))
+        //var real = sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        document.writeln(`Seu salário no brasil é: ${sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>
