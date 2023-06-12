@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Onde você nasceu? <input type="text" name="txtpais" id="txtpais"> </p>
+    <button onclick="status()">Verificar</button>
+    <p id="res"></p>
+
+    <script>
+        function status(){
+            var p = document.getElementById('txtpais')
+            var r = document.getElementById('res')
+            // var pais = p.value
+
+            r.innerHTML = `Seu país é <strong>${p.value}</strong>.`//Direto entre as chaves
+            if (p == 'Brasil'){
+                r.innerHTML += ` Então você é <strong>brasileiro!`
+            }
+
+            else{
+                r.innerHTML += ` Então você é <strong>estrangeiro!`
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
