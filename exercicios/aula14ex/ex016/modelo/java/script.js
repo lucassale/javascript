@@ -7,12 +7,23 @@ function contar(){
         alert('[ERRO] Faltam valores...')
     }else{
         res.innerHTML = 'Contando: '
-        var i = ini.value
-        var f = fim.value
-        var p = pas.value
-        for(var c = i; c <= f; c += p){
-            res.innerHTML += ` ${c}`
+        var i = Number(ini.value)
+        var f = Number(fim.value)
+        var p = Number(pas.value)
+        if(p == 0){
+            alert(`[ERRO] Vou considerar "Passo" 1`)
+            p = 1
         }
+        if(i < f){
+            for(var c = i; c <= f; c += p){
+                res.innerHTML += ` ${c} \u{1f449}`
+            }
+        }else if(i > f){
+            for(var c = i; c>= f; c -= p){
+                res.innerHTML += ` ${c} \u{1f449}`
+            }
+        }
+        res.innerHTML += `\u{1f3c1}`
     }
     
 }
