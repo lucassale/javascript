@@ -4,16 +4,27 @@ var item = document.createElement('option')
 var res = document.getElementById('resultado')
 var valores = []
 
-
-function adicionar(){
-    if ( num.value >= 1 && num.value <= 100){  
-        item.text += `Valor ${num.value} adicionado.`
-        sel.appendChild (item)
-        valores.push(num.value)
+function isNumero(n){
+    if (Number(n) >= 1 && Number(n) <= 100){
+        return true
     }else{
-        alert(`[ERRO] Valor inválido ou já encontrado.`)
+        return false
     }
-    num.focus()
-    alert(valores)
 }
 
+function inLista(n, l){
+    if (l.indexOf(Number(n)) != -1 ){
+        return true
+    }else{
+        return false
+    }
+}
+
+function adicionar(){
+    if (isNumero(num.value) && !inLista(num.value, valores)){
+        alert('Tudo ok!')
+        
+    }else{
+        alert('[ERRO] Valor inválido ou já encontrado na lista!')
+    }
+}
