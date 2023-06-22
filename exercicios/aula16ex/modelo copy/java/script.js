@@ -1,9 +1,19 @@
+var num = document.getElementById('numero')
+var sel = document.getElementById('lista')
+var item = document.createElement('option')
+var res = document.getElementById('resultado')
+var valores = []
+
+
 function adicionar(){
-    let num = document.getElementById('numero')
-    let n = Number(num.value)
-    let res = document.getElementById('resultado')
-    let select = document.createElement('option')
-    select.text = `O valor ${n} foi adicionado.`
-    let v = select
-    res.appendChild = (`${n}`)
+    if ( num.value >= 1 && num.value <= 100){  
+        item.text += `Valor ${num.value} adicionado.`
+        sel.appendChild (item)
+        valores.push(num.value)
+    }else{
+        alert(`[ERRO] Valor inválido ou já encontrado.`)
+    }
+    num.focus()
+    alert(valores)
 }
+

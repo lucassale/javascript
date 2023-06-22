@@ -22,8 +22,8 @@ main{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.348);
 }
 
-main > div{
-    
+select{
+    width: 250px;
 }
 
 footer{
